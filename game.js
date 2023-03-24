@@ -57,10 +57,10 @@ function create() {
     prevBackground = background;
 
     // Set up tank
-    tankClean = this.textures.get('tank_clean').getSourceImage();
-    tankHit = this.textures.get('tank_hit').getSourceImage();
-    tankExplosion = this.textures.get('tank_explosion').getSourceImage();
-    tank = this.physics.add.sprite(400, 480, 'tank_clean');
+    const tankClean = this.textures.addSpriteSheet('tankClean', 'images/tank_clean.png', { frameWidth: 100, frameHeight: 100 });
+    const tankHit = this.textures.addSpriteSheet('tankHit', 'images/tank_hit.png', { frameWidth: 100, frameHeight: 100 });
+    const pigeon = this.textures.addSpriteSheet('pigeon', 'images/pigeon.png', { frameWidth: 50, frameHeight: 50 });
+    const poop = this.textures.addSpriteSheet('poop', 'images/poop.png', { frameWidth: 10, frameHeight: 10 });
 
     // Set up pigeons
     pigeonImg = this.textures.get('pigeon').getSourceImage();
